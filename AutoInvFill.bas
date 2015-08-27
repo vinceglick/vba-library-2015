@@ -48,16 +48,7 @@ ED = OpenPath & "2015-8-26" & ".xlsm"
         
         
 End Sub
-        
-        
-        'Match = Match(Ident, "Identifier", 0).Select
-        
-        'Range("NTPEP Number", Selection.End(xlDown)).Select
-        'Selection.End(xlDown).Select
-        'Range("A11").Select
-        'Selection.Insert Shift:=xlDown
-        'ActiveSheet.Paste
-        'Application.CutCopyMode = False
+
 
 
 
