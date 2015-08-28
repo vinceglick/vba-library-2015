@@ -1,0 +1,78 @@
+﻿Sub MacroChkRqstNTPEP()
+'
+' MacroChkRqstNTPEP Macro
+' copies to NTPEP log
+'
+' Keyboard Shortcut: Ctrl+Shift+N
+'
+    Range("C6").Select
+    Selection.Copy
+    ActiveWindow.ActivatePrevious
+    Range("F89").Select
+    ActiveSheet.Paste
+    ActiveWindow.ActivatePrevious
+    Range("M12").Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    ActiveWindow.ActivatePrevious
+    Range("E89").Select
+    ActiveSheet.Paste
+    ActiveWindow.ActivatePrevious
+    ActiveWindow.SmallScroll Down:=6
+    Range("C32").Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    ActiveWindow.ActivatePrevious
+    Range("B89").Select
+    ActiveSheet.Paste
+    ActiveWindow.ActivatePrevious
+    Range("K35").Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    ActiveWindow.ActivatePrevious
+    Range("C89").Select
+    ActiveSheet.Paste
+    ActiveWindow.ActivatePrevious
+    ActiveWindow.SmallScroll Down:=6
+    Range("E37").Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    ActiveWindow.ActivatePrevious
+    Range("D89").Select
+    ActiveSheet.Paste
+    ActiveWindow.ActivatePrevious
+    Range("G37").Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    ActiveWindow.ActivatePrevious
+    Range("G89").Select
+    ActiveSheet.Paste
+    Range("A73").Select
+    Application.CutCopyMode = False
+    Selection.AutoFill Destination:=Range("A73:A89"), Type:=xlFillDefault
+    Range("A73:A89").Select
+    Rows("89:89").Select
+    Selection.Borders(xlDiagonalDown).LineStyle = xlNone
+    Selection.Borders(xlDiagonalUp).LineStyle = xlNone
+    Selection.Borders(xlEdgeLeft).LineStyle = xlNone
+    Selection.Borders(xlEdgeTop).LineStyle = xlNone
+    Selection.Borders(xlEdgeBottom).LineStyle = xlNone
+    Selection.Borders(xlEdgeRight).LineStyle = xlNone
+    Selection.Borders(xlInsideVertical).LineStyle = xlNone
+    Selection.Borders(xlInsideHorizontal).LineStyle = xlNone
+    Range("C89:D89").Select
+    With Selection
+        .HorizontalAlignment = xlRight
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    Range("E89").Select
+    Selection.NumberFormat = "_($* #,##0.00_);_($* (#,##0.00);_($* ""-""??_);_(@_)"
+    ActiveWorkbook.Save
+End Sub
